@@ -47,6 +47,10 @@ textarea {
   border: 2px solid #000;
   border-radius: 0;
 }
+textarea {
+  display: block;
+  width: 100%;
+}
 
 input:disabled {
   opacity: 0.5;

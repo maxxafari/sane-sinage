@@ -18,7 +18,7 @@
 <div>
   <h1>What do you want to do?</h1>
 
-  <a href="/new/">Start new poll</a>
+  <a href="/poll/new/">Start new poll</a>
   {#if join}
     <GoToPollForm />
   {:else}<button on:click={() => (join = true)}>Join poll</button>{/if}

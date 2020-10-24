@@ -1,0 +1,14 @@
+
+do svelte course ( 50%) 
+
+screens
+ - new or join
+  - new 
+  - poll
+  
+  - api - getPoll
+  - vodeCard
+  - api -placeVote
+  - db, vertical expansion, publish updates to clients ? 
+  - push express SEE / websocket only send idUpdated.
+  - 
