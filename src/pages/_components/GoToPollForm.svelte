@@ -9,6 +9,9 @@
   }
 </script>
 
+<style>
+</style>
+
 <form on:submit|preventDefault={submit}>
   <input
     id="pollNumber"
@@ -16,6 +19,7 @@
     type="text"
     bind:value={pollId}
     use:focus
+    placeholder="Enter poll number ex: 1234"
   />
   <button type="submit" disabled={!pollId}>Join poll</button>
 </form>
