@@ -3,6 +3,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 
+const apiRouter = require('./routes/api');
+
 const __PROJECT_ROOT = path.join(__dirname, '../');
 
 const app = express();
@@ -16,9 +18,7 @@ app.get('/api/test', (req, res) => {
   return res.json({ test: 'It works' });
 });
 
-app.get('/api/*', (req, res) => {
-  return res.status(404).send('This is not the path youre looking for...');
-});
+app.use('/api', apiRouter);
 
 // link all static files
 app.use(express.static(path.join(__PROJECT_ROOT, 'dist')));
