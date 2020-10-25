@@ -1,5 +1,6 @@
 import svelte from 'rollup-plugin-svelte-hot';
 import Hmr from 'rollup-plugin-hot'
+import alias from 'rollup-plugin-alias';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
@@ -9,6 +10,15 @@ import del from 'del'
 import replace from '@rollup/plugin-replace';
 import { spassr } from 'spassr'
 
+function aliases(){
+    // use 'src/...' in import statment instead of '../../../...'
+    const replacement = `${__dirname}/src/`
+    return alias({
+        entries: [
+            { find: /^src\//, replacement }, // find strings beginning with 'src/'
+        ]
+    })
+}
 const isNollup = !!process.env.NOLLUP
 
 export function createRollupConfigs(config) {
@@ -71,6 +81,7 @@ function baseConfig(config, ctx) {
                 copyOnce: true,
                 flatten: false
             }),
+            aliases(),
             svelte(svelteConfig),
 
             // resolve matching modules from current working directory

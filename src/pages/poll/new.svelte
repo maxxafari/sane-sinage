@@ -1,5 +1,5 @@
 <script>
-  import { autoresize_textarea } from '../../use/autoresize_textarea.js'
+  import { autoresize_textarea } from 'src/helpers/autoresize_textarea'
   let title = ''
   let description = ''
   function controlTextArea(event) {
