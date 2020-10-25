@@ -3,7 +3,6 @@
     "browser": true,
     "es6": true
   },
-  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 2019,
     "sourceType": "module"
@@ -18,5 +17,8 @@
   ],
   "rules": {
  
+  },
+  "globals": {
+    "process": true
   }
 }
