@@ -6,6 +6,6 @@
 
 <ul>
   {#each votes.sort(sortByTime) as vote (vote.name)}
-    <li>{vote.name}: {vote.voredFor}</li>
+    <li>{vote.name}: {vote.votedFor}</li>
   {/each}
 </ul>

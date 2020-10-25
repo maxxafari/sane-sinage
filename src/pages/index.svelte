@@ -1,5 +1,4 @@
 <script>
-  import RoutifyIntro from './example/_components/RoutifyIntro.svelte'
   import { metatags, goto } from '@sveltech/routify'
   import GoToPollForm from './_components/GoToPollForm.svelte'
   metatags.title = 'My Routify app'

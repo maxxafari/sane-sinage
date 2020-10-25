@@ -5,12 +5,12 @@ export const poll_123 = {
   votes: [
     {
       name: 'Max',
-      voredFor: 8,
+      votedFor: 8,
       timeStamp: new Date(),
     },
     {
       name: 'Olga',
-      voredFor: 5.5,
+      votedFor: 5.5,
       timeStamp: new Date() - 3600,
     },
   ],
