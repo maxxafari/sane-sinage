@@ -25,8 +25,9 @@ app.use(express.static(path.join(__PROJECT_ROOT, 'dist')));
 
 app.get('*', (req, res) => {
   // return 404 and not index when reqesting missing .js .img and so on
-  const fileEnding = req._parsedOriginalUrl.pathname.split('/').pop().split('.')[1] || '';
-  if(!['','.html'].includes(fileEnding)) return res.res.sendStatus(404);
+  const fileEnding =
+    req._parsedOriginalUrl.pathname.split('/').pop().split('.')[1] || '';
+  if (!['', '.html'].includes(fileEnding)) return res.res.sendStatus(404);
 
   return res.sendFile(path.join(__PROJECT_ROOT, 'dist', '__app.html'));
 });
